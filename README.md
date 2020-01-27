@@ -1,1 +1,1 @@
-# PwebI-ServletsJSP
+# Projeto de JSF do AjudAí
