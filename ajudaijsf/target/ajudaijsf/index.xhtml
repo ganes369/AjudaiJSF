@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+    <body>
+    <h1>Olá, bem-vindo ao exemplo JSF</h1>
+    <h:form>
+
+        <h:panelGrid columns="3">
+
+            <h:outputLabel value="Login: " />
+            <h:inputText id="login" required="true" requiredMessage="Login obrigatório" />
+            <h:message for="login" />
+
+            <h:outputLabel value="Senha: " />
+            <h:inputSecret id="senha" required="true" requiredMessage="Senha obrigatória" />
+            <h:message for="senha"></h:message>
+
+            <h:commandButton value="Enviar" />
+
+        </h:panelGrid>
+
+    </h:form>
+    </body>
+
+</f:view>
+</html>
