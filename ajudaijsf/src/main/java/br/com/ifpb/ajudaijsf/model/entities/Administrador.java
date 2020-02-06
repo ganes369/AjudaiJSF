@@ -1,17 +1,31 @@
 package br.com.ifpb.ajudaijsf.model.entities;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Administrador {
+    private int codigo;
     private String nomeCompleto;
     private String email;
     private String senha;
     private LocalDate dataInicio;
 
+    public Administrador(String senha){
+        this.senha = senha;
+    }
+
     public Administrador() {
     }
 
     public Administrador(String nomeCompleto, String email, String senha, LocalDate dataInicio) {
+        this.nomeCompleto = nomeCompleto;
+        this.email = email;
+        this.senha = senha;
+        this.dataInicio = dataInicio;
+    }
+
+    public Administrador(int codigo, String nomeCompleto, String email, String senha, LocalDate dataInicio) {
+        this.codigo = codigo;
         this.nomeCompleto = nomeCompleto;
         this.email = email;
         this.senha = senha;
@@ -48,5 +62,10 @@ public class Administrador {
 
     public void setDataInicio(LocalDate dataInicio) {
         this.dataInicio = dataInicio;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(senha);
     }
 }

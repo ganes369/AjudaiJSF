@@ -8,8 +8,35 @@
 
     <h:head>
          <title>AjudAí - Acesso administrador</title>
+         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+         <link rel="stylesheet" href="resources/css/index.css"/>
+         <h:outputStylesheet library="css" name="index.css"></h:outputStylesheet>
     </h:head>
     <h:body>
+        <br/><br/><br/><br/>
+       <h:form>
+           <div class="container painel-login">
+               <h:graphicImage value="/resources/images/logo.png" styleClass="center"/>
+               <br/><br/><br/>
+               <div class="row container">
+                   <div class="input-field">
+                       <i class="material-icons prefix">alternate_email</i>
+                       <h:inputText id="email" required="true">
+                           <f:passThroughAttribute name="placeholder" value="E-mail"></f:passThroughAttribute>
+                       </h:inputText>
+                   </div>
+                   <div class="input-field">
+                       <i class="material-icons prefix">lock</i>
+                       <h:inputSecret id="senha" required="true">
+                           <f:passThroughAttribute name="placeholder" value="Senha"></f:passThroughAttribute>
+                       </h:inputSecret>
+                   </div>
+               </div>
+           </div>
+       </h:form>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" type="text/javascript"></script>
     </h:body>
 </html>
